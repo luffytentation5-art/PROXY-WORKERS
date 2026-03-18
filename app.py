@@ -6,9 +6,9 @@ app = Flask(__name__)
 HEADERS = {
     "User-Agent": "Mozilla/5.0"
 }
-
-@app.route("/fetch")
-def fetch():
+@app.route("/")
+def home():
+    return "WORKER OK"
     url = request.args.get("url")
 
     if not url:
